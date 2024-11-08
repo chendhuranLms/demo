@@ -1,0 +1,505 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+
+}
+
+/* Header and Navigation */
+header {
+    width: 100%;
+}
+
+.img img {
+    width: 100%;
+    display: block;
+    height: auto;
+    max-height: 250px;
+    object-fit: cover;
+}
+
+.navbar {
+    background-color: #002d62;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.navbar li {
+    position: relative;
+}
+
+.navbar a {
+    display: block;
+    padding: 15px 20px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.3s, color 0.3s;
+    cursor: pointer;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: #fff;
+    color: #002d62;
+    border-radius: 4px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 180px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1000;
+    top: 100%;
+    left: 0;
+    border-radius: 4px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.dropdown-content li {
+    width: 100%;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background 0.3s, color 0.3s;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content,
+.dropdown.active .dropdown-content {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Intro Section */
+.intro {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: #fff;
+}
+
+.intro h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2em;
+    color: #002d62;
+    margin-bottom: 10px;
+}
+
+.intro p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+.intro-logo {
+    display: flex;
+    margin-left: 800px;
+    max-width: 200px;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+
+
+.gradient-text {
+    font-size: 3em;
+    font-style: italic; 
+    margin-top: 20px;/* Adjust the font size as desired */
+    background: linear-gradient(180deg, #cae000, #f36405,#ff0000 );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text ;
+    color: transparent; /* Hides the default text color */
+    display: inline-block;
+}
+
+
+/* Highlights (News and Notices) */
+.highlights {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #fff;
+    flex-wrap: wrap;
+}
+
+.highlights .news, .highlights .notices {
+    width: 300px;
+    height: 200px; /* Set height for the container */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.news h3, .notices h3 {
+    font-size: 1.3em;
+    color: #002d62;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Content that scrolls */
+.news-content, .notices-content {
+    flex-grow: 1;
+    overflow: hidden; /* Hide overflow for scrolling effect */
+    position: relative;
+    height: 130px; /* Adjusted height for scrolling area */
+}
+
+.news-content ul, .notices-content ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 0;
+    position: absolute;
+    animation: autoScroll 10s linear infinite;
+}
+
+/* Define the scrolling animation */
+@keyframes autoScroll {
+    0% {
+        top: 0;
+    }
+    100% {
+        top: -100%; /* Adjust for full scroll effect */
+    }
+}
+
+.highlights li {
+    margin-bottom: 8px;
+    font-size: 1.1em;
+}
+
+
+
+
+/* Main Content */
+.content {
+    display: flex;
+    font-size: 1.2em;
+    justify-content: center;
+    text-justify: auto;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.content .text, 
+.content .quality-policy, 
+.content .training-placement {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: justify;
+}
+
+.content h2 {
+    color: #002d62;
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.content p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #002d62;
+    color: #fff; /* This can be adjusted if needed */
+    padding: 40px 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #ffffff; /* Change this color to your desired font color */
+}
+.footer-container .departments,
+.footer-container .departments h2,
+.footer-container .departments ul li a {
+    color: #ffffff; /* Set the text color to white */
+}
+
+.footer-container .departments ul li a:hover {
+    color: #f1c40f; /* Optional: Set hover color */
+}
+
+.footer-section {
+    flex: 1 1 200px;
+    margin: 20px;
+}
+
+.footer-section h3 {
+
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    color: #f1c40f; /* Keep this if you want h3 to remain this color */
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #fff; /* Change link color here if needed */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #f1c40f;
+}
+
+.footer-section address {
+    font-style: normal;
+}
+
+.footer-section address a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section address a:hover {
+    color: #f1c40f;
+}
+
+.social-media .social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.social-media .social-icons a {
+    color: #fff;
+    font-size: 1.2em;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #004080;
+    border-radius: 50%;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.social-media .social-icons a:hover {
+    background-color: #f1c40f;
+    color: #002d62;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    border-top: 1px solid #fff;
+    padding-top: 20px;
+    font-size: 0.9em;
+}
+
+.footer-bottom p {
+    margin: 5px 0;
+}
+
+.footer-bottom a {
+    color: #f1c40f;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-bottom a:hover {
+    color: #fff;
+}
+.intro p1 {
+    font-size: 28px;
+    margin-top: 30px;
+    position: absolute;
+    left: 1500px;  /* Position 50 pixels from the left */
+    top: 400px;   /* Start at 50 pixels from the top */
+    transform: translateY(-80px); /* Adjust font size */
+    color: #333;     /* Change text color as needed */
+    margin-top: 10px; /* Add some space above the counseling code */
+  }
+  .intro strong {
+    color: #43347a; 
+    font-style: normal;/* Change color as needed */
+  }
+  .intro-image {
+
+    position: absolute;
+    left:100px;/* Center the image */
+    margin: 20px 0; /* Add margin for spacing */
+  }
+  a  .back-to-top{
+    font-size: 24px;
+  }
+ .intro p3 {
+    font-size: 30px;
+    white-space: nowrap;
+    background: linear-gradient(135deg, #0066ff, #00ccff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+ }
+ .intro p4 {
+    font-size: 20px;
+    white-space: nowrap;
+    font-style: italic;
+    color: #ff0000;
+    
+
+ }
+ /* Base styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .navbar ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+  }
+  
+  .navbar li {
+    padding: 10px;
+  }
+  
+  .navbar a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+  }
+  
+  footer .footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  footer .footer-section {
+    width: 30%;
+    margin: 10px;
+  }
+  
+  footer .footer-section h3 {
+    font-size: 18px;
+  }
+  
+  footer .social-icons a {
+    margin-right: 10px;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+  }
+  
+  /* Media Queries for responsiveness */
+  
+  /* For small screens like phones */
+  @media (max-width: 767px) {
+    header img {
+      height: 200px; /* smaller height for smaller screens */
+    }
+  
+    .navbar ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .footer-section {
+      width: 100%;
+      text-align: center;
+    }
+  
+    .footer-bottom {
+      font-size: 12px;
+    }
+  
+    .back-to-top {
+      bottom: 20px;
+      right: 20px;
+    }
+  }
+  
+  /* For medium screens like tablets */
+  @media (max-width: 1024px) and (min-width: 768px) {
+    .footer-container {
+      flex-direction: row;
+    }
+  
+    .footer-section {
+      width: 45%;
+      margin: 10px;
+    }
+  }
+  
+  /* For large screens like desktops */
+  @media (min-width: 1025px) {
+    .footer-container {
+      justify-content: space-between;
+    }
+  
+    .footer-section {
+      width: 30%;
+      margin: 10px;
+    }
+  }
+  
